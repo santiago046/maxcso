@@ -10,8 +10,7 @@ project(
 
 
 # Prevent cmake from running in the root directory to avoid replacing the original Makefile
-get_property(not_top DIRECTORY PROPERTY PARENT_DIRECTORY)
-if(NOT not_top)
+if(CMAKE_SOURCE_DIR STREQUAL CMAKE_BINARY_DIR)
     message(FATAL_ERROR "Generating CMake build files in the project root directory is not allowed. Please create a new directory and run cmake from there, or use the command 'cmake -B /path/to/build_directory' to specify a build directory.")
 endif()
 
