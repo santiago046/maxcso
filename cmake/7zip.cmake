@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.8)
 
-set(7ZIP_SRC_DIR ${CMAKE_SOURCE_DIR}/7zip)
+set(7ZIP_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/7zip)
 add_library(
 	7zip
-	OBJECT
+	STATIC
 	${7ZIP_SRC_DIR}/C/Alloc.c
 	${7ZIP_SRC_DIR}/C/HuffEnc.c
 	${7ZIP_SRC_DIR}/C/LzFind.c

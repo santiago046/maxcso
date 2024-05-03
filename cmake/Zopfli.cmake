@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-set(ZOPFLI_SRC_DIR ${CMAKE_SOURCE_DIR}/zopfli/src/zopfli)
+set(ZOPFLI_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/zopfli/src/zopfli)
 add_library(
 	zopfli
 	OBJECT
